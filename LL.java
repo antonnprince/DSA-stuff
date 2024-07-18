@@ -42,8 +42,25 @@ class LinkedList{
         
         node.next = head;
         head=node;
+    }  
+    public void deleteLL(int index)
+    {
+        Node n = head;
+        Node n1;
+        for(int i=0;i<index-1;i++)
+        {
+            n=n.next;
+        }
+        
+        n1 = n.next;
+        
+        n.next = n1.next;
+        
+        n1=null;
+        
+        System.out.println("After deletion ");
+        displayList();
     }
-    
     public void displayList()
     {
         Node n = head;
@@ -52,12 +69,10 @@ class LinkedList{
             System.out.println(n.data);
             n = n.next;
         }
-        
-        // System.out.println(n.data);
     }
 }
 
-public class Main
+public class LL
 {
 	public static void main(String[] args) {
 	    
@@ -65,7 +80,7 @@ public class Main
 	    l.insertFirst(1);
 	    l.insertFirst(0);
 	    l.insertLast(2);
-	   l.displayList();
-	
+	    l.displayList();
+	    l.deleteLL(2);
 	}
 }
