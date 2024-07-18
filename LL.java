@@ -1,104 +1,71 @@
-class Node {
+class Node{
     int data;
     Node next;
 }
 
-class LinkedList {
+
+class LinkedList{
     Node head;
-
-    public void insertLast(int d) {
-        Node node = new Node();
-        node.data = d;
-        node.next = null;
-
-        if (head == null) {
-            head = node;
-        } else {
-            Node n = head;
-            while (n.next != null) {
-                n = n.next;
-            }
-            n.next = node;
-        }
-    }
-
-    public void insertFirst(int d) {
-        Node node = new Node();
-        node.data = d;
-        node.next = null;
-
-        if (head == null) {
-            head = node;
-        } else {
-            node.next = head;
-            head = node;
-        }
-    }
     
-    public void insert(int index,int data)
+    public void insertLast(int d)
     {
         Node node = new Node();
-        node.data = data;
-        node.next = null;
+        node.data = d;
+        node.next=null;
         
         if(head==null)
         {
-            insertFirst(data);
+            head = node;
+            return;
         }
-        
         else
         {
-             Node n = head;
-                
-            for(int i = 0;i < index-2;i++)
+            Node n = head;
+            
+            while(n.next!=null)
             {
-               
                 n = n.next;
             }
             
-            node.next = n.next;
-            
             n.next = node;
-            
-            
+            node.next=null;
+            return;
         }
     }
     
-    public void delete(int index)
+    public void insertFirst(int d)
+    {
+        Node node = new Node();
+        node.data = d;
+        node.next = null;
+        
+        
+        node.next = head;
+        head=node;
+    }
+    
+    public void displayList()
     {
         Node n = head;
-        
-        Node n1;
-        
-        for(int i = 0;i<index-2;i++)
-        {
+        while(n!=null)
+        {   
+            System.out.println(n.data);
             n = n.next;
         }
         
-        n1 = n.next;
-        
-        n.next = n1.next;
-        
-        n1 = null;
-    }
-
-    public void display() {
-        Node node = head;
-        while (node != null) {
-            System.out.println(node.data);
-            node = node.next;
-        }
+        // System.out.println(n.data);
     }
 }
 
-public class LL {
-    public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.insertFirst(3);
-        list.insertFirst(4);
-        list.insertLast(5);
-        list.insert(2,0);
-        list.delete(2);
-        list.display();
-    }
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    LinkedList l = new LinkedList();
+	    l.insertFirst(1);
+	    l.insertFirst(0);
+	    l.insertLast(2);
+	   l.displayList();
+	
+	}
 }
