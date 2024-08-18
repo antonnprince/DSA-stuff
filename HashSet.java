@@ -1,4 +1,4 @@
-import java.util.HashSet;
+import java.util.*;
 
 public class HashSet
 {
@@ -23,5 +23,13 @@ public class HashSet
 
 		
         System.out.println(set);
+
+		 Iterator it = set.iterator();
+        
+        while(it.hasNext())
+        {
+            System.out.println(it.next());
+        }
+        
 	}
 }
