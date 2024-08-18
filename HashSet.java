@@ -1,6 +1,6 @@
 import java.util.HashSet;
 
-public class Main
+public class HashSet
 {
 	public static void main(String[] args) {
 
@@ -20,5 +20,8 @@ public class Main
         
         
         System.out.println("Size of set is "+set.size());
+
+		
+        System.out.println(set);
 	}
 }
