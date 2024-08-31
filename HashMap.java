@@ -37,6 +37,8 @@ public class Main
 		Key: 2 Value: Car
 		Key: 3 Value: Bike
 	*/
-	
+
+	System.out.println("Size of map is "+map.size());
+
 	}
 }
