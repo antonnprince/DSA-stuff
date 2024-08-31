@@ -33,5 +33,8 @@ public class Main{
         {
             System.out.println(item);
         }
+
+	    System.out.println(list) //prints items in list as array
+		    
     }
 }
