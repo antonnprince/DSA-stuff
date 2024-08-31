@@ -19,8 +19,17 @@ public class Main
 	    
 	    arraylist.add(2, 400);
 	    arraylist.add(3,6969);
+	    arraylist.add(5,500); //will cause arrayindexoutofbounds exception
 	    
-	    System.out.println(arraylist);
+	    arraylist.set(1,69969);
+	    System.out.println("0th element is  "+arraylist.get(0));
+	    System.out.println("All elements are " +arraylist);
+	    
+	    arraylist.remove(arraylist.size()-1);
+	    System.out.println("All elements are " +arraylist);
+	    
+	    Collections.sort(arraylist);
+	    System.out.println("After sorting:  " +arraylist);
 	    
 	}
 }
