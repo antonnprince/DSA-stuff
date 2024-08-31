@@ -1,35 +1,26 @@
 import java.util.*;
 
-public class HashSet
+
+public class Main
 {
 	public static void main(String[] args) {
-
-        HashSet<Integer> set = new HashSet<>();
-        
-        set.add(1);
-        set.add(2);
-        set.add(2);
-        set.add(3);
-        
-         if(!set.contains(6))
-         System.out.println("6 doesn't exist");
-        
-        set.remove(1);
-        if(!set.contains(1))
-        System.out.println("Element doesn't exist");
-        
-        
-        System.out.println("Size of set is "+set.size());
-
-		
-        System.out.println(set);
-
-		 Iterator it = set.iterator();
-        
-        while(it.hasNext())
+    Set<Integer> set = new HashSet<>();
+    
+    set.add(1);
+    set.add(2);
+    System.out.println("The state of set having 100 is " +set.contains(100));
+    System.out.println(set);
+   
+    // set.add(1); 
+    // set.forEach(element -> System.out.print(element + " "));
+    
+    
+        Iterator<Integer> iterator = set.iterator();
+        while(iterator.hasNext())
         {
-            System.out.println(it.next());
+            System.out.println(iterator.next());
         }
         
+        System.out.println("Size of set is "+set.size());
 	}
 }
