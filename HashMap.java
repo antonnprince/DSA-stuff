@@ -1,37 +1,29 @@
 import java.util.*;
 
-public class HashMap
+
+public class Main
 {
 	public static void main(String[] args) {
-        // key, value
-        HashMap <String, Integer> map = new HashMap<>();
+    
+    Map<Integer, String> map = new HashMap<>();
+		
+    map.put(1,"Bus");
+    map.put(2, "Car");
+    map.put(3, "Bike");
+    
+    System.out.println("The 2nd value is "+map.get(2));
+    System.out.println(map.containsKey(1));
+    System.out.println(map.containsValue("skibidi"));
         
-        map.put("test",1);
-        map.put("book",2);
-        map.put("test",300);
-        map.put("orange",400);
-        System.out.println(map);
+        for(Map.Entry entry : map.entrySet())
+        {
+            System.out.println(entry.getKey() + " : "+entry.getValue());
+        }
         
-        if(map.containsKey("test"))
-	    System.out.println("test is present");
-	    
-	    System.out.println(map.get("test")+" is present");
-	    
-	    Set<String> keys = map.keySet();
-	    
-	    for(String key : keys)
-	    {
-	        System.out.println(key + " " + map.get(key));
-	       // System.out.print
-	    }
-	    
-	    map.remove("orange");
-	    
-	    System.out.println("After removal");
-	    for(String key : keys)
-	    {
-	        System.out.println(key + " " + map.get(key));
-	       // System.out.print
-	    }
-	}   
+        Set<Integer> keys = map.keySet();
+        for(Integer key : keys)
+        {
+            System.out.println("Key: "+key+" Value: "+map.get(key));
+        }
+	}
 }
