@@ -22,7 +22,12 @@ public class Main{
         list.remove(1);
         list.removeLast();
         list.removeFirst();
-        
+          list.add(2,1000000);
+	    
+	    for(Integer item : list)
+	    {
+	        System.out.println(item);
+	    }
         System.out.println("After removal");
         for(Integer item:list)
         {
