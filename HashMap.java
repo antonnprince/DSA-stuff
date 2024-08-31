@@ -19,11 +19,24 @@ public class Main
         {
             System.out.println(entry.getKey() + " : "+entry.getValue());
         }
+
+	/*
+	 	1 : Bus
+		2 : Car
+		3 : Bike
+ 	*/
         
         Set<Integer> keys = map.keySet();
         for(Integer key : keys)
         {
             System.out.println("Key: "+key+" Value: "+map.get(key));
         }
+
+	/* 
+		Key: 1 Value: Bus
+		Key: 2 Value: Car
+		Key: 3 Value: Bike
+	*/
+	
 	}
 }
